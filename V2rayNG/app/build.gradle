@@ -5,7 +5,7 @@ plugins {
 
 android {
     compileSdkVersion Integer.parseInt("$compileSdkVer")
-    buildToolsVersion "$buildToolsVer"
+
 
     compileOptions {
         targetCompatibility = "8"
