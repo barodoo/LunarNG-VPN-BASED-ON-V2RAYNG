@@ -11,6 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: V2rayNG
+
     steps:
       - uses: actions/checkout@v4
 
@@ -21,7 +25,7 @@ jobs:
           java-version: 17
           cache: gradle
 
-      - name: Grant execute permission for gradlew
+      - name: Grant execute permission
         run: chmod +x gradlew
 
       - name: Build Debug APK
@@ -31,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: app/build/outputs/apk/debug/*.apk
+          path: V2rayNG/app/build/outputs/apk/debug/*.apk
